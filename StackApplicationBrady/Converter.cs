@@ -7,104 +7,52 @@ namespace StackApplicationBrady
 {
     public class Converter
     {
+        // Loop through each item X in the input string.
+        // If X is letter/number, print it.
+        // If operator, add to operator stack.
+        // While X is operator, check it against operator[TOP] to see if it has a higher or equal precedence.
+        //     IF X HIGHER OR EQUAL PRECEDENCE, pop TOP and add TOP to output stack.
+        //     ELSE, push X to operator stack.
+        public bool StackEmpty(Stack s) { if(s.Count == 0) { return true; } else { return false; } }
+        public string Top(Stack s) { if (s.Count != 0) { return s.Peek().ToString(); } else { return null; } }
         public string Convert(string infix)
         {
-            Stack stack = new Stack();
-
             string output = "";
+            Stack stack = new Stack();
 
             foreach (char c in infix)
             {
-                if (Char.IsNumber(c))
+                if (Char.IsNumber(c) || Char.IsLetter(c))
                 {
                     output += c;
                 }
-                else if (Char.IsLetter(c))
+                if(c == '(' || c == ')' || c == '+' || c == '-' || c == '*' || c == '/' || c == '^')
                 {
-                    output += c;
+                    stack.Push(c);
                 }
-                else if (c == '(' || c == ')' || c == '+' || c == '-' || c == '*' || c == '/' || c == '^')
+            }
+            // While X is operator, check it against operator[TOP] to see if it has a higher or equal precedence.
+            //     IF X HIGHER OR EQUAL PRECEDENCE, pop TOP and add TOP to output stack.
+            //     ELSE, push X to operator stack. ---> no else needed??
+            while (!StackEmpty(stack))
+            {
+                foreach(char c in infix)
                 {
-                    if(stack.Count > 0)
+                    string top = Top(stack);
+                    int precedenceOfTop = Precedence(top);
+                    int precedenceOfCurrent = Precedence(c.ToString());
+
+                    if(precedenceOfCurrent >= precedenceOfTop)
                     {
-                        bool allElementsSorted = false;
-
-             while (!stackIsEmpty() AND isOperator(top_of_stack) AND precedence(top_of_stack) >= precedence(item)) 
-
-                        while (!StackIsEmpty(stack))
+                        if (!StackEmpty(stack))
                         {
-                            int topOfStackPrecedence = 0;
-
-                            if (stack.Count > 0)
-                            {
-                                topOfStackPrecedence = Precedence(stack.Peek().ToString()); //Gets the precedence of the top item in stack
-                            }
-                            else
-                            {
-                                break;
-                            }
-                            
-                            int currPrecedence = Precedence(c.ToString()); //Gets precedence of current item
-                            if (topOfStackPrecedence < currPrecedence)
-                            {
-                                stack.Push(c); //Push current symbol
-                            }
-                            else
-                            {
-                                stack.Pop();
-                                stack.Push(c);
-                            }
-
-                            if (c == ')')
-                            {
-                                string top = "";
-                                
-                                if(stack.Count > 0)
-                                {
-                                    top = stack.Peek().ToString();
-                                }
-                                else
-                                {
-                                    break;
-                                }
-                                
-                                while(top != "(")
-                                {
-                                    
-                                    output += top; //Write operators to output
-                                    stack.Pop(); //Then pop them from the stack
-                                }
-
-                                stack.Pop(); //Pops the left parenthesis
-                            }
-
-                            if(stack.Count <= 0)
-                            {
-                                allElementsSorted = true;
-                            }
+                            output += stack.Pop();
                         }
-                    }
-                    else
-                    {
-                        stack.Push(c); //Pushes element onto stack if stack is null
                     }
                 }
             }
 
             return output;
-        }
-
-        public bool StackIsEmpty(Stack s)
-        {
-            try
-            {
-                s.Peek();
-                return false;
-            }
-            catch //If s.Peek() throws a stack empty exception
-            {
-                return true;
-            }
         }
 
         public int Precedence(string symbol)

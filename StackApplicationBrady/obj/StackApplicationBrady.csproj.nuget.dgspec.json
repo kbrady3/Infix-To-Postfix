@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kabrina\\Documents\\SPRING 2021\\Data Structures\\Module 4\\StackApplicationBrady\\StackApplicationBrady\\StackApplicationBrady.csproj": {}
+    "C:\\Users\\Kabrina\\Documents\\GitHub Repos\\Infix-To-Postfix\\StackApplicationBrady\\StackApplicationBrady.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kabrina\\Documents\\SPRING 2021\\Data Structures\\Module 4\\StackApplicationBrady\\StackApplicationBrady\\StackApplicationBrady.csproj": {
+    "C:\\Users\\Kabrina\\Documents\\GitHub Repos\\Infix-To-Postfix\\StackApplicationBrady\\StackApplicationBrady.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kabrina\\Documents\\SPRING 2021\\Data Structures\\Module 4\\StackApplicationBrady\\StackApplicationBrady\\StackApplicationBrady.csproj",
+        "projectUniqueName": "C:\\Users\\Kabrina\\Documents\\GitHub Repos\\Infix-To-Postfix\\StackApplicationBrady\\StackApplicationBrady.csproj",
         "projectName": "StackApplicationBrady",
-        "projectPath": "C:\\Users\\Kabrina\\Documents\\SPRING 2021\\Data Structures\\Module 4\\StackApplicationBrady\\StackApplicationBrady\\StackApplicationBrady.csproj",
+        "projectPath": "C:\\Users\\Kabrina\\Documents\\GitHub Repos\\Infix-To-Postfix\\StackApplicationBrady\\StackApplicationBrady.csproj",
         "packagesPath": "C:\\Users\\Kabrina\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kabrina\\Documents\\SPRING 2021\\Data Structures\\Module 4\\StackApplicationBrady\\StackApplicationBrady\\obj\\",
+        "outputPath": "C:\\Users\\Kabrina\\Documents\\GitHub Repos\\Infix-To-Postfix\\StackApplicationBrady\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

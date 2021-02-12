@@ -9,3 +9,14 @@ C:\Users\Kabrina\Documents\SPRING 2021\Data Structures\Module 4\StackApplication
 C:\Users\Kabrina\Documents\SPRING 2021\Data Structures\Module 4\StackApplicationBrady\StackApplicationBrady\obj\Debug\netcoreapp3.1\StackApplicationBrady.AssemblyInfo.cs
 C:\Users\Kabrina\Documents\SPRING 2021\Data Structures\Module 4\StackApplicationBrady\StackApplicationBrady\obj\Debug\netcoreapp3.1\StackApplicationBrady.dll
 C:\Users\Kabrina\Documents\SPRING 2021\Data Structures\Module 4\StackApplicationBrady\StackApplicationBrady\obj\Debug\netcoreapp3.1\StackApplicationBrady.pdb
+C:\Users\Kabrina\Documents\GitHub Repos\Infix-To-Postfix\StackApplicationBrady\bin\Debug\netcoreapp3.1\StackApplicationBrady.exe
+C:\Users\Kabrina\Documents\GitHub Repos\Infix-To-Postfix\StackApplicationBrady\bin\Debug\netcoreapp3.1\StackApplicationBrady.deps.json
+C:\Users\Kabrina\Documents\GitHub Repos\Infix-To-Postfix\StackApplicationBrady\bin\Debug\netcoreapp3.1\StackApplicationBrady.runtimeconfig.json
+C:\Users\Kabrina\Documents\GitHub Repos\Infix-To-Postfix\StackApplicationBrady\bin\Debug\netcoreapp3.1\StackApplicationBrady.runtimeconfig.dev.json
+C:\Users\Kabrina\Documents\GitHub Repos\Infix-To-Postfix\StackApplicationBrady\bin\Debug\netcoreapp3.1\StackApplicationBrady.dll
+C:\Users\Kabrina\Documents\GitHub Repos\Infix-To-Postfix\StackApplicationBrady\bin\Debug\netcoreapp3.1\StackApplicationBrady.pdb
+C:\Users\Kabrina\Documents\GitHub Repos\Infix-To-Postfix\StackApplicationBrady\obj\Debug\netcoreapp3.1\StackApplicationBrady.csprojAssemblyReference.cache
+C:\Users\Kabrina\Documents\GitHub Repos\Infix-To-Postfix\StackApplicationBrady\obj\Debug\netcoreapp3.1\StackApplicationBrady.AssemblyInfoInputs.cache
+C:\Users\Kabrina\Documents\GitHub Repos\Infix-To-Postfix\StackApplicationBrady\obj\Debug\netcoreapp3.1\StackApplicationBrady.AssemblyInfo.cs
+C:\Users\Kabrina\Documents\GitHub Repos\Infix-To-Postfix\StackApplicationBrady\obj\Debug\netcoreapp3.1\StackApplicationBrady.dll
+C:\Users\Kabrina\Documents\GitHub Repos\Infix-To-Postfix\StackApplicationBrady\obj\Debug\netcoreapp3.1\StackApplicationBrady.pdb
