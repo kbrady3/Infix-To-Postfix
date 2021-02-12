@@ -10,46 +10,49 @@ namespace StackApplicationBrady
         public string Convert(string infix)
         {
             string output = "";
+            Console.WriteLine(infix);
             Stack stack = new Stack();
 
             foreach (char c in infix)
             {
+                Console.WriteLine(c);
                 if (Char.IsNumber(c) || Char.IsLetter(c))
                 {
                     output += c;
                 }
-                //If the character is an operator and operator's stack is empty, push operator into operators' stack.
+
                 if (IsOperator(c) && StackEmpty(stack))
                 {
                     stack.Push(c);
                 }
-                if (IsOperator(c) && !StackEmpty(stack))
+                else if (IsOperator(c) && !StackEmpty(stack))
                 {
                     string top = Top(stack);
                     int precedenceOfTop = Precedence(top);
                     int precedenceOfCurrent = Precedence(c.ToString());
 
-                    //If the precedence of scanned operator is greater than the top most operator of operator's stack, push this operator into operand's stack.
                     if (precedenceOfCurrent > precedenceOfTop)
                     {
                         stack.Push(c);
                     }
-                    //If the precedence of scanned operator is less than or equal to the top most operator of operator's stack, pop the operators from operand's stack until we find a lower precedence operator than the scanned character. Never pop out ( '(' ) or( ')' ) whatever may be the precedence level of scanned character.
+     
                     if (precedenceOfCurrent <= precedenceOfTop)
                     {
                         if (stack.Count > 0)
                         {
-                            while(top != "(" && top != ")" && precedenceOfCurrent > precedenceOfTop)
+                            while(top != "(" && top != ")")
                             {
-                                stack.Pop();
+                                if(stack.Count > 0)
+                                {
+                                    stack.Pop();
+                                }
                             }
                         }
-                        //If the character is opening round bracket( '(' ), push it into operator's stack.
+
                         if (c == '(')
                         {
                             stack.Push(c);
                         }
-                        //If the character is closing round bracket ( ')' ), pop out operators from operator's stack until we find an opening bracket ('(' ).
                         else if (c == ')')
                         {
                             while (top != "(")
@@ -58,31 +61,12 @@ namespace StackApplicationBrady
                             }
                         }
                     }
-
-                    //Now pop out all the remaining operators from the operator's stack and push into output stack.
-                    while (!StackEmpty(stack))
-                    {
-                        output += Top(stack);
-                    }
                 }
             }
 
             while (!StackEmpty(stack))
             {
-                foreach(char c in infix)
-                {
-                    string top = Top(stack);
-                    int precedenceOfTop = Precedence(top);
-                    int precedenceOfCurrent = Precedence(c.ToString());
-
-                    if(precedenceOfCurrent >= precedenceOfTop)
-                    {
-                        if (!StackEmpty(stack))
-                        {
-                            output += stack.Pop();
-                        }
-                    }
-                }
+                output += Top(stack);
             }
 
             return output;
@@ -112,10 +96,6 @@ namespace StackApplicationBrady
 
         public int Precedence(string symbol)
         {
-            //if (symbol == "(" || symbol == ")")
-            //{
-            //    return 4;
-            //}
             if (symbol == "^")
             {
                 return 3;
