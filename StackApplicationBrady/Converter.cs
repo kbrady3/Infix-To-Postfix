@@ -29,7 +29,9 @@ namespace StackApplicationBrady
                     {
                         bool allElementsSorted = false;
 
-                        while (!allElementsSorted)
+             while (!stackIsEmpty() AND isOperator(top_of_stack) AND precedence(top_of_stack) >= precedence(item)) 
+
+                        while (!StackIsEmpty(stack))
                         {
                             int topOfStackPrecedence = 0;
 
@@ -90,6 +92,19 @@ namespace StackApplicationBrady
             }
 
             return output;
+        }
+
+        public bool StackIsEmpty(Stack s)
+        {
+            try
+            {
+                s.Peek();
+                return false;
+            }
+            catch //If s.Peek() throws a stack empty exception
+            {
+                return true;
+            }
         }
 
         public int Precedence(string symbol)
